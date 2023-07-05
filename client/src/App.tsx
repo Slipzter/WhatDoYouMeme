@@ -5,7 +5,7 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 
-  const testName = 'TEST';
+  const testName = 'test3';
 
   const printMeme = async () => {
     fetch('http://localhost:8080/api/memes' + '/' + testName)
