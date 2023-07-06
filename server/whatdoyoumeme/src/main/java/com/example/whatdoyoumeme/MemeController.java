@@ -44,5 +44,11 @@ public class MemeController {
         return ResponseEntity.noContent().build();
     }
 
+    @PutMapping("/{memeName}")
+    public ResponseEntity<?> updateMeme(@PathVariable("memeName") String memeName) {
+        MemeDTO updatedMeme = service.updateMeme(memeName);
+        return ResponseEntity.ok(updatedMeme);
+    }
+
 
 }

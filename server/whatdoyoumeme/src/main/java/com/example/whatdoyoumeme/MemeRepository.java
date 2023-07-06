@@ -33,4 +33,9 @@ public class MemeRepository {
         Meme meme = repo.findMemeByName(memeName);
         repo.deleteById(meme.getId());
     }
+
+    public Meme updateMeme(String memeName) {
+        Meme meme = repo.findMemeByName(memeName);
+        return repo.save(meme);
+    }
 }

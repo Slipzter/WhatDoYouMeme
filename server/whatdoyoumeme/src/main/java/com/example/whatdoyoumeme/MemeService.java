@@ -34,12 +34,20 @@ public class MemeService {
 
     public MemeDTO getSpecificMeme(String memeName) {
         Meme meme = memeRepository.getSpecificMeme(memeName);
-        MemeDTO memeDTO = new MemeDTO(meme.getName(), Base64.getEncoder().encodeToString(meme.getBytes()));
-        return memeDTO;
+        return convertMemeToDTO(meme);
     }
 
     public void deleteMeme(String memeName) {
         memeRepository.deleteMeme(memeName);
+    }
+
+    public MemeDTO updateMeme(String memeName) {
+        Meme meme = memeRepository.updateMeme(memeName);
+        return convertMemeToDTO(meme);
+    }
+
+    private MemeDTO convertMemeToDTO(Meme meme) {
+        return new MemeDTO(meme.getName(), Base64.getEncoder().encodeToString(meme.getBytes()));
     }
 
     private void storeGeneratedMemeInDb(byte[] bytes, String name) {
