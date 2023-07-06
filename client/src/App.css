@@ -138,6 +138,20 @@ body {
   color: #4E4FEB;
 }
 
+.all-memes {
+  margin-left: 8px;
+}
+
+.all-memes__button {
+  margin: 0 0 20px 0;
+}
+
 .all-memes__gallery {
-  
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.all-memes__gallery__single {
+  width: 300px;
 }

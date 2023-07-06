@@ -45,8 +45,10 @@ function App() {
           <aside className='app-aside'>
             <ViewMemes imageSrc={imageSrc} memeName={name}/>
           </aside>
-          <AllMemes />
         </main>
+        <section className='app-gallery'>
+          <AllMemes />
+        </section>
       </div>
     </>
   )

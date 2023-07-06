@@ -14,7 +14,6 @@ function AllMemes() {
     fetch('http://localhost:8080/api/memes')
     .then(response => response.json())
     .then(data => {
-      console.log(data);
       setAllMemes(data);
     })
     .catch(error => {
@@ -27,9 +26,9 @@ function AllMemes() {
       <h2 className="all-memes__title">All Memes</h2>
       <button className="all-memes__button" onClick={handleClick}>Display All</button>
       <div className="all-memes__gallery">
-        {allMemes.map((meme: meme) => {
+        {allMemes.map((meme: meme, index: number) => {
           return (
-            <img className="all-memes__gallery__single" src={`data:image/png;base64, ${meme.base64}`} alt="funny meme" />
+            <img key={index} className="all-memes__gallery__single" src={`data:image/png;base64, ${meme.base64}`} alt="funny meme" />
           )
         })}
       </div>
