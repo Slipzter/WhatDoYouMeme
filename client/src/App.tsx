@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import ViewMemes from './components/ViewMemes';
 import FindMeme from './components/FindMeme';
+import GenerateMeme from './components/GenerateMeme';
 
 
 function App() {
@@ -22,9 +23,11 @@ function App() {
       setImageSrc(`data:image/png;base64, ${base64Image.base64}`);
     })
     .catch(error => {
-      console.error('Error:', error);
+      console.error(error);
     });
   }
+
+
 
 
 
@@ -34,8 +37,8 @@ function App() {
     <>
       <div>
         <FindMeme setName={setName}/>
-        <p id='image-container'></p>
         <ViewMemes imageSrc={imageSrc}/>
+        <GenerateMeme />
       </div>
     </>
   )

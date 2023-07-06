@@ -21,7 +21,7 @@ public class MemeController {
     public ResponseEntity<?> generateMemeFromApi(@RequestBody AddMemeDTO dto) {
         try {
             service.generateMemeFromApi(dto.memeName(), dto.memeType(), dto.bottomText(), dto.topText());
-            return ResponseEntity.ok("Ok!");
+            return ResponseEntity.ok("Meme generated successfully");
         } catch (IOException e) {
             return ResponseEntity.badRequest().build();
         } catch (InterruptedException e) {
