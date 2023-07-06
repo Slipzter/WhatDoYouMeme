@@ -26,7 +26,9 @@ public class MemeService {
     }
 
     public void generateMemeFromApi(String name, String type, String bottom, String top) throws IOException, InterruptedException {
-        byte[] bytes = apiRepository.generateMemeFromApi(type, bottom, top);
+        String formattedTop = top.replace(" ", "%20");
+        String formattedBottom = bottom.replace(" ", "%20");
+        byte[] bytes = apiRepository.generateMemeFromApi(type, formattedBottom, formattedTop);
         storeGeneratedMemeInDb(bytes, name);
     }
 
