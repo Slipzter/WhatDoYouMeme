@@ -45,8 +45,8 @@ public class MemeController {
     }
 
     @PutMapping("/{memeName}")
-    public ResponseEntity<?> updateMeme(@PathVariable("memeName") String memeName) {
-        MemeDTO updatedMeme = service.updateMeme(memeName);
+    public ResponseEntity<?> updateMeme(@PathVariable("memeName") String memeName, @RequestBody UpdateMemeDTO updateMemeDTO) {
+        MemeDTO updatedMeme = service.updateMeme(memeName, updateMemeDTO.name());
         return ResponseEntity.ok(updatedMeme);
     }
 

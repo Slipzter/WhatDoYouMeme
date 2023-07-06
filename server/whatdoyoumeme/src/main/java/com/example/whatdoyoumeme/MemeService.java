@@ -29,7 +29,7 @@ public class MemeService {
         String formattedTop = top.replace(" ", "%20").replace("?", "%3F");
         String formattedBottom = bottom.replace(" ", "%20").replace("?", "%3F");
         byte[] bytes = apiRepository.generateMemeFromApi(type, formattedBottom, formattedTop);
-        storeGeneratedMemeInDb(bytes, name);
+        memeRepository.storeMemeInDb(new Meme(name, bytes));
     }
 
     public MemeDTO getSpecificMeme(String memeName) {
@@ -41,17 +41,14 @@ public class MemeService {
         memeRepository.deleteMeme(memeName);
     }
 
-    public MemeDTO updateMeme(String memeName) {
-        Meme meme = memeRepository.updateMeme(memeName);
+    public MemeDTO updateMeme(String memeName, String newName) {
+        Meme meme = memeRepository.getSpecificMeme(memeName);
+        meme.setName(newName);
+        memeRepository.storeMemeInDb(meme);
         return convertMemeToDTO(meme);
     }
 
     private MemeDTO convertMemeToDTO(Meme meme) {
         return new MemeDTO(meme.getName(), Base64.getEncoder().encodeToString(meme.getBytes()));
     }
-
-    private void storeGeneratedMemeInDb(byte[] bytes, String name) {
-        memeRepository.storeMemeInDb(bytes, name);
-    }
-
 }

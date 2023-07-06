@@ -21,8 +21,8 @@ public class MemeRepository {
         return Streamable.of(all).toList();
     }
 
-    public void storeMemeInDb(byte[] bytes, String name) {
-        repo.save(new Meme(name, bytes));
+    public void storeMemeInDb(Meme meme) {
+        repo.save(meme);
     }
 
     public Meme getSpecificMeme(String memeName) {
@@ -32,10 +32,5 @@ public class MemeRepository {
     public void deleteMeme(String memeName) {
         Meme meme = repo.findMemeByName(memeName);
         repo.deleteById(meme.getId());
-    }
-
-    public Meme updateMeme(String memeName) {
-        Meme meme = repo.findMemeByName(memeName);
-        return repo.save(meme);
     }
 }
