@@ -18,9 +18,10 @@ function MemeForm(props: formProps) {
   }
 
   return (
-    <div>Find Meme
-      <form onSubmit={handleSubmit}>
-        <label>Enter name of meme:
+    <section className="find-meme">
+      <h2>Find Meme</h2>
+      <form onSubmit={handleSubmit} className="find-meme__form">
+        <label>Find meme:
           <input
             type="text" 
             value={name}
@@ -28,9 +29,9 @@ function MemeForm(props: formProps) {
             onChange={(e) => setName(e.currentTarget.value)}
           />
         </label>
-        <input type="submit" value="Display Meme"/>
+        <input type="submit" value="Display Meme" className="form-submit"/>
       </form>
-    </div>
+    </section>
   )
 }
 

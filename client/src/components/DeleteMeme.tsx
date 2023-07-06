@@ -17,13 +17,11 @@ function DeleteMeme() {
     }).then(response => console.log(response.status));
   };
 
-
-
-
   return (
-    <div>Delete Meme
-      <form onSubmit={handleSubmit}>
-        <label>Enter name of meme to delete:
+    <div className="delete-meme">
+      <h2>Delete Meme</h2>
+      <form onSubmit={handleSubmit} className="delete-meme__form">
+        <label>Name of meme to delete:
           <input
             type="text" 
             value={name}
@@ -31,7 +29,7 @@ function DeleteMeme() {
             onChange={(e) => setName(e.currentTarget.value)}
           />
         </label>
-        <input type="submit" value="Delete Meme"/>
+        <input type="submit" value="Delete Meme" className="form-submit"/>
       </form>
     </div>
   )

@@ -1,21 +1,14 @@
-
-
 type Meme = {
   memeName: string;
   imageSrc: string;
 }
 
-
-
-
-
-
 function ViewMemes(props: Meme) {
 
   return (
-    <div>ViewMeme
-      <h2>{props.memeName}</h2>
+    <div>
       <img src={props.imageSrc} alt="funny meme" />
+      <h3><q> {props.memeName} </q></h3>
     </div>
   )
 }

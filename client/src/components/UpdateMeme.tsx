@@ -27,9 +27,10 @@ function UpdateMeme() {
   };
 
   return (
-    <div>Update Meme
-      <form onSubmit={handleSubmit}>
-        <label>Enter name of meme to update:
+    <div className="update-meme">
+      <h2>Update Meme</h2>
+      <form onSubmit={handleSubmit} className="update-meme__form">
+        <label>Choose one to update:
           <input
             type="text" 
             value={name}
@@ -45,7 +46,7 @@ function UpdateMeme() {
             onChange={(e) => setNewName(e.currentTarget.value)}
           />
         </label>
-        <input type="submit" value="Update Meme"/>
+        <input type="submit" value="Update Meme" className="form-submit"/>
       </form>
     </div>
   )

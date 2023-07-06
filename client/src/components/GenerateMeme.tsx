@@ -41,10 +41,11 @@ function GenerateMeme() {
   };
 
   return (
-    <div>Generate New Meme
-      <form onSubmit={generateMeme}>
+    <div className="generate-meme">
+      <h2>Generate New Meme</h2>
+      <form onSubmit={generateMeme} className="generate-meme__form">
         <label>
-          Enter name of meme:
+          Give it a name:
           <input
             type="text" 
             value={inputName}
@@ -53,16 +54,16 @@ function GenerateMeme() {
           />
         </label>
         <label>
-          Enter type of meme:
+          Choose image:
           <input
             type="text" 
             value={inputType}
-            placeholder="Type"
+            placeholder="Image"
             onChange={(e) => setMemeType(e.currentTarget.value)}
           />
         </label>
         <label>
-          Enter top text:
+          Top text:
           <input
             type="text" 
             value={inputTopText}
@@ -71,7 +72,7 @@ function GenerateMeme() {
           />
         </label>
         <label>
-          Enter bottom text:
+          Bottom text:
           <input
             type="text" 
             value={inputBottomText}
@@ -79,7 +80,7 @@ function GenerateMeme() {
             onChange={(e) => setBottomText(e.currentTarget.value)}
           />
         </label>
-        <input type="submit" value="Generate Meme"/>
+        <input type="submit" value="Generate Meme" className="form-submit"/>
       </form>
     </div>
   )

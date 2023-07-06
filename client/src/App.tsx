@@ -5,8 +5,6 @@ import FindMeme from './components/FindMeme';
 import GenerateMeme from './components/GenerateMeme';
 import DeleteMeme from './components/DeleteMeme';
 import UpdateMeme from './components/UpdateMeme';
-import AllMemes from './components/AllMemes';
-
 
 function App() {
 
@@ -14,7 +12,9 @@ function App() {
   const [imageSrc, setImageSrc] = useState("");
 
   useEffect(() => {
-    printMeme();
+    if (name !== "") {
+      printMeme();
+    }
   }, [name])
 
   const printMeme = async () => {
@@ -31,13 +31,21 @@ function App() {
   return (
     <>
       <div>
-        <h1>what do you meme</h1>
-        <FindMeme setName={setName}/>
-        <ViewMemes imageSrc={imageSrc} memeName={name}/>
-        <GenerateMeme />
-        <UpdateMeme />
-        <DeleteMeme />
-        <AllMemes />
+        <header className='app-header'>        
+          <h1 className='app-title'>what do you meme ?</h1>
+        </header>
+        <main className='app-main'>
+          <section className='app-forms'>
+            <FindMeme setName={setName}/>
+            <GenerateMeme />
+            <UpdateMeme />
+            <DeleteMeme />
+          </section>
+          <aside className='app-aside'>
+            <ViewMemes imageSrc={imageSrc} memeName={name}/>
+          </aside>
+        </main>
+
       </div>
     </>
   )
