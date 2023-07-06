@@ -44,44 +44,49 @@ function GenerateMeme() {
     <div className="generate-meme">
       <h2>Generate New Meme</h2>
       <form onSubmit={generateMeme} className="generate-meme__form">
-        <label>
-          Give it a name:
-          <input
-            type="text" 
-            value={inputName}
-            placeholder="Name"
-            onChange={(e) => setMemeName(e.currentTarget.value)}
-          />
-        </label>
-        <label>
-          Choose image:
-          <input
-            type="text" 
-            value={inputType}
-            placeholder="Image"
-            onChange={(e) => setMemeType(e.currentTarget.value)}
-          />
-        </label>
-        <label>
-          Top text:
-          <input
-            type="text" 
-            value={inputTopText}
-            placeholder="Top Text"
-            onChange={(e) => setTopText(e.currentTarget.value)}
-          />
-        </label>
-        <label>
-          Bottom text:
-          <input
-            type="text" 
-            value={inputBottomText}
-            placeholder="Bottom Text"
-            onChange={(e) => setBottomText(e.currentTarget.value)}
-          />
-        </label>
-        <input type="submit" value="Generate Meme" className="form-submit"/>
+        <div className="generate-meme__form__left">
+          <label>
+            Give it a name:
+            <input
+              type="text" 
+              value={inputName}
+              placeholder="Name"
+              onChange={(e) => setMemeName(e.currentTarget.value)}
+            />
+          </label>
+          <label>
+            Choose image:
+            <input
+              type="text" 
+              value={inputType}
+              placeholder="Image"
+              onChange={(e) => setMemeType(e.currentTarget.value)}
+            />
+          </label>
+          <label>
+            Top text:
+            <input
+              type="text" 
+              value={inputTopText}
+              placeholder="Top Text"
+              onChange={(e) => setTopText(e.currentTarget.value)}
+            />
+          </label>
+          <label>
+            Bottom text:
+            <input
+              type="text" 
+              value={inputBottomText}
+              placeholder="Bottom Text"
+              onChange={(e) => setBottomText(e.currentTarget.value)}
+            />
+          </label>
+        </div>
+        <div className="generate-meme__form__right">
+          <input type="submit" value="Generate Meme" className="form-submit"/>
+        </div>
       </form>
+      <hr className="line-break"/>
     </div>
   )
 }

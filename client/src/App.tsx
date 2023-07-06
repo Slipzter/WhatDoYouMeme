@@ -5,6 +5,7 @@ import FindMeme from './components/FindMeme';
 import GenerateMeme from './components/GenerateMeme';
 import DeleteMeme from './components/DeleteMeme';
 import UpdateMeme from './components/UpdateMeme';
+import AllMemes from './components/AllMemes';
 
 function App() {
 
@@ -32,7 +33,7 @@ function App() {
     <>
       <div>
         <header className='app-header'>        
-          <h1 className='app-title'>what do you meme ?</h1>
+          <h1 className='app-title'>what Do You Meme</h1>
         </header>
         <main className='app-main'>
           <section className='app-forms'>
@@ -44,8 +45,8 @@ function App() {
           <aside className='app-aside'>
             <ViewMemes imageSrc={imageSrc} memeName={name}/>
           </aside>
+          <AllMemes />
         </main>
-
       </div>
     </>
   )

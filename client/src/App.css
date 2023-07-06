@@ -11,15 +11,15 @@ body {
 .app-header {
   margin-top: 0;
   background-color: #4E4FEB;
-  height: 10vh;
+  height: 7vh;
   display: flex;
   align-items: center;
-  padding-left: 3%;
+  padding-left: 1.5%;
   text-align: center;
 }
 
 .app-title {
-  font-size: 2.5em;
+  font-size: 2em;
 }
 
 .app-main {
@@ -28,10 +28,14 @@ body {
 }
 
 .app-aside {
-margin-top: 30px;
+  margin: 40px 0;
+  padding: 40px 0;
+  border-radius: 8px;
+  width: 600px;
 }
 
 .app-forms {
+  margin-left: 8px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -45,7 +49,13 @@ margin-top: 30px;
 
 .find-meme__form {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+}
+
+.find-meme__form__left {
+  width: 30%;
+  margin-right: 60px;
+  gap: 4px;
 }
 
 .generate-meme {
@@ -55,12 +65,39 @@ margin-top: 30px;
 
 .generate-meme__form {
   display: flex;
+  align-items: center;
+}
+
+.generate-meme__form__left {
+  width: 30%;
+  display: flex;
   flex-direction: column;
+  justify-content: center;
+  margin-right: 60px;
+  gap: 4px;
+}
+
+.generate-meme__form__right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.update-meme {
 }
 
 .update-meme__form {
   display: flex;
+  align-items: center;
+}
+
+.update-meme__form__left {
+  width: 30%;
+  display: flex;
   flex-direction: column;
+  justify-content: center;
+  margin-right: 60px;
+  gap: 4px;
 }
 
 .form-submit {
@@ -68,8 +105,39 @@ margin-top: 30px;
   width: 120px;
 }
 
-.delete-meme__form {
-  display: flex;
-  flex-direction: column;
+.delete-meme {
 }
 
+.delete-meme__form {
+  display: flex;
+  align-items: center;
+}
+
+.delete-meme__form__left {
+  width: 30%;
+  margin-right: 60px;
+  gap: 4px;
+}
+
+.single-meme {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.single-meme__image {
+  border-radius: 4px;
+  max-width: 500px;
+}
+
+.line-break {
+  margin: 20px 0 0 0;
+  height: 1px;
+  width: 80%;
+  color: #4E4FEB;
+}
+
+.all-memes__gallery {
+  
+}

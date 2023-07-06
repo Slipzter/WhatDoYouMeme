@@ -29,25 +29,31 @@ function UpdateMeme() {
   return (
     <div className="update-meme">
       <h2>Update Meme</h2>
+      
       <form onSubmit={handleSubmit} className="update-meme__form">
-        <label>Choose one to update:
-          <input
-            type="text" 
-            value={name}
-            placeholder="Name"
-            onChange={(e) => setName(e.currentTarget.value)}
-          />
-        </label>
-        <label>Enter new name:
-          <input
-            type="text" 
-            value={newName}
-            placeholder="New Name"
-            onChange={(e) => setNewName(e.currentTarget.value)}
-          />
-        </label>
-        <input type="submit" value="Update Meme" className="form-submit"/>
+        <div className="update-meme__form__left">
+          <label>Choose one to update:
+            <input
+              type="text" 
+              value={name}
+              placeholder="Name"
+              onChange={(e) => setName(e.currentTarget.value)}
+            />
+          </label>
+          <label>Enter new name:
+            <input
+              type="text" 
+              value={newName}
+              placeholder="New Name"
+              onChange={(e) => setNewName(e.currentTarget.value)}
+            />
+          </label>
+        </div>
+        <div className="update-meme__form__right">
+          <input type="submit" value="Update Meme" className="form-submit"/>
+        </div>
       </form>
+      <hr className="line-break"/>
     </div>
   )
 }
