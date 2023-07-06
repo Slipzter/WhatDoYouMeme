@@ -1,14 +1,16 @@
 import { useState } from 'react'
 import './App.css'
+import MemeForm from './components/MemeForm';
 
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const [name, setName] = useState("");
 
   const testName = 'test3';
 
   const printMeme = async () => {
-    fetch('http://localhost:8080/api/memes' + '/' + testName)
+    fetch('http://localhost:8080/api/memes' + '/' + name)
     .then(response => response.json())
     .then(base64Image => {
       const imgElement = document.createElement('img');
@@ -32,10 +34,8 @@ function App() {
   return (
     <>
       <div>
-        <h1></h1>
-        <p id='image-container'>
-
-        </p>
+        <MemeForm setName={setName}/>
+        <p id='image-container'></p>
       </div>
     </>
   )

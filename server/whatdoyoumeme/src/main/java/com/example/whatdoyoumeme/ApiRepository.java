@@ -10,7 +10,6 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-import java.util.Base64;
 
 @Repository
 public class ApiRepository {
@@ -23,7 +22,6 @@ public class ApiRepository {
                 .header("X-RapidAPI-Host", "ronreiter-meme-generator.p.rapidapi.com")
                 .method("GET", HttpRequest.BodyPublishers.noBody())
                 .build();
-
         HttpResponse<InputStream> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofInputStream());
 
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
@@ -32,8 +30,8 @@ public class ApiRepository {
         while ((bytesRead = response.body().read(buffer)) != -1) {
             outputStream.write(buffer, 0, bytesRead);
         }
-        byte[] imageData = outputStream.toByteArray();
+        byte[] imageBytes = outputStream.toByteArray();
 
-        return imageData;
+        return imageBytes;
     }
 }
