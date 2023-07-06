@@ -35,6 +35,7 @@ function DeleteMeme() {
           <input type="submit" value="Delete Meme" className="form-submit"/>
         </div>
       </form>
+      <hr className="line-break"/>
     </div>
   )
 }

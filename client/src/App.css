@@ -139,14 +139,15 @@ body {
   margin: 20px 0 0 0;
   height: 1px;
   width: 80%;
-  color: #4E4FEB;
+  background-image: linear-gradient(to right, #4E4FEB, rgba(255, 255, 255, 0));
+  color: transparent;
 }
 
 .all-memes {
   margin-left: 8px;
 }
 
-.all-memes__button {
+.all-memes__button__show {
   margin: 0 0 20px 0;
 }
 
@@ -157,5 +158,16 @@ body {
 }
 
 .all-memes__gallery__single {
+  border: 2px #4e4eeb89 solid;
+  padding: 0;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.all-memes__gallery__single__image {
   width: 300px;
 }
