@@ -17,6 +17,10 @@ public class MemeController {
         this.service = service;
     }
 
+
+    // TODO
+    // IMPLEMENT GET ALL AT HOME ENDPOINT
+    
     @PostMapping
     public ResponseEntity<?> generateMemeFromApi(@RequestBody AddMemeDTO dto) {
         try {

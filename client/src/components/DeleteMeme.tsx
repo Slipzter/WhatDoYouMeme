@@ -22,18 +22,18 @@ function DeleteMeme() {
 
   return (
     <div>Delete Meme
-    <form onSubmit={handleSubmit}>
-      <label>Enter name of meme to delete:
-        <input
-          type="text" 
-          value={name}
-          placeholder="Name"
-          onChange={(e) => setName(e.currentTarget.value)}
-        />
-      </label>
-      <input type="submit" value="Delete Meme"/>
-    </form>
-  </div>
+      <form onSubmit={handleSubmit}>
+        <label>Enter name of meme to delete:
+          <input
+            type="text" 
+            value={name}
+            placeholder="Name"
+            onChange={(e) => setName(e.currentTarget.value)}
+          />
+        </label>
+        <input type="submit" value="Delete Meme"/>
+      </form>
+    </div>
   )
 }
 
