@@ -31,6 +31,10 @@ public class Meme {
         this.bytes = bytes;
     }
 
+    public String getId() {
+        return id;
+    }
+
     public String getName() {
         return name;
     }

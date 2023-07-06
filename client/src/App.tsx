@@ -3,6 +3,7 @@ import './App.css'
 import ViewMemes from './components/ViewMemes';
 import FindMeme from './components/FindMeme';
 import GenerateMeme from './components/GenerateMeme';
+import DeleteMeme from './components/DeleteMeme';
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
         <FindMeme setName={setName}/>
         <ViewMemes imageSrc={imageSrc} memeName={name}/>
         <GenerateMeme />
+        <DeleteMeme />
       </div>
     </>
   )

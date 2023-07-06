@@ -30,6 +30,7 @@ public class MemeRepository {
     }
 
     public void deleteMeme(String memeName) {
-        repo.deleteMemeByName(memeName);
+        Meme meme = repo.findMemeByName(memeName);
+        repo.deleteById(meme.getId());
     }
 }

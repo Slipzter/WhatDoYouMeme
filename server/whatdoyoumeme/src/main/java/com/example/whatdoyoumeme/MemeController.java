@@ -32,6 +32,9 @@ public class MemeController {
     @GetMapping("/{memeName}")
     public ResponseEntity<?> getSpecificMeme(@PathVariable("memeName") String memeName) {
         MemeDTO meme = service.getSpecificMeme(memeName);
+        if (meme == null) {
+            return ResponseEntity.notFound().build();
+        }
         return ResponseEntity.ok(meme);
     }
 
