@@ -83,6 +83,10 @@ body {
   align-items: center;
 }
 
+.form-control {
+  width: 190px;
+}
+
 .update-meme {
 }
 
