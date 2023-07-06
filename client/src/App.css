@@ -5,17 +5,19 @@ html {
 }
 
 body {
-
+  margin: 0;
 }
 
 .app-header {
   margin-top: 0;
-  background-color: #4E4FEB;
+  background-image: linear-gradient(to right, #4E4FEB, #242424);
   height: 7vh;
   display: flex;
   align-items: center;
   padding-left: 1.5%;
   text-align: center;
+  position: sticky;
+  top: 0;
 }
 
 .app-title {
@@ -23,6 +25,7 @@ body {
 }
 
 .app-main {
+  margin-left: 16px;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -132,7 +135,7 @@ body {
 
 .single-meme__image {
   border-radius: 4px;
-  max-width: 500px;
+  width: 400px;
 }
 
 .line-break {
@@ -144,11 +147,19 @@ body {
 }
 
 .all-memes {
-  margin-left: 8px;
+  margin-left: 16px;
+}
+
+.all-memes__title {
+  margin-left: 10px;
 }
 
 .all-memes__button__show {
-  margin: 0 0 20px 0;
+  margin: 0 0 20px 10px;
+}
+
+.all-memes__button__hide {
+  margin: 0 0 20px 8px;
 }
 
 .all-memes__gallery {
@@ -159,7 +170,7 @@ body {
 
 .all-memes__gallery__single {
   border: 2px #4e4eeb89 solid;
-  padding: 0;
+  padding: 8px;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -170,4 +181,5 @@ body {
 
 .all-memes__gallery__single__image {
   width: 300px;
+  border-radius: 2px;
 }

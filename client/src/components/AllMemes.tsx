@@ -33,9 +33,9 @@ function AllMemes() {
       <div className="all-memes__gallery">
         {allMemes.map((meme: meme, index: number) => {
           return (
-            <div className="all-memes__gallery__single">
+            <div key={index} className="all-memes__gallery__single">
               <h4>{meme.name}</h4>
-              <img key={index} className="all-memes__gallery__single__image" src={`data:image/png;base64, ${meme.base64}`} alt="funny meme" />
+              <img className="all-memes__gallery__single__image" src={`data:image/png;base64, ${meme.base64}`} alt="funny meme" />
             </div>
           )
         })}
