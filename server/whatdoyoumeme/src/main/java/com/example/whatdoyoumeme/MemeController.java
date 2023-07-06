@@ -35,5 +35,11 @@ public class MemeController {
         return ResponseEntity.ok(meme);
     }
 
+    @DeleteMapping("/{memeName}")
+    public ResponseEntity<?> deleteMeme(@PathVariable("memeName") String memeName) {
+        service.deleteMeme(memeName);
+        return ResponseEntity.noContent().build();
+    }
+
 
 }

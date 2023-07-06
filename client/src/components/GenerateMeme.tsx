@@ -37,11 +37,11 @@ function GenerateMeme() {
       headers: {
         "Content-type": "application/json; charset=UTF-8"
       }
-    });
+    }).then(response => console.log(response.status));
   };
 
   return (
-    <div>
+    <div>Generate New Meme
       <form onSubmit={generateMeme}>
         <label>
           Enter name of meme:

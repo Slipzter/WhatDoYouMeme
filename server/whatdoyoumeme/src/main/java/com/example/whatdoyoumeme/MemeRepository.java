@@ -27,6 +27,9 @@ public class MemeRepository {
 
     public Meme getSpecificMeme(String memeName) {
         return repo.findMemeByName(memeName);
+    }
 
+    public void deleteMeme(String memeName) {
+        repo.deleteMemeByName(memeName);
     }
 }

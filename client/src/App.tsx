@@ -37,7 +37,7 @@ function App() {
     <>
       <div>
         <FindMeme setName={setName}/>
-        <ViewMemes imageSrc={imageSrc}/>
+        <ViewMemes imageSrc={imageSrc} memeName={name}/>
         <GenerateMeme />
       </div>
     </>

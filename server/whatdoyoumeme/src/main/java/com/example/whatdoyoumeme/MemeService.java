@@ -38,6 +38,10 @@ public class MemeService {
         return memeDTO;
     }
 
+    public void deleteMeme(String memeName) {
+        memeRepository.deleteMeme(memeName);
+    }
+
     private void storeGeneratedMemeInDb(byte[] bytes, String name) {
         memeRepository.storeMemeInDb(bytes, name);
     }

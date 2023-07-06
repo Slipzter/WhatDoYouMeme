@@ -14,6 +14,7 @@ function MemeForm(props: formProps) {
   const handleSubmit = (event: any) => {
     event.preventDefault();
     props.setName(name);
+    setName('');
   }
 
   return (
