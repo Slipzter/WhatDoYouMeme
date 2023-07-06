@@ -14,7 +14,6 @@ function MemeForm(props: formProps) {
   const handleSubmit = (event: any) => {
     event.preventDefault();
     props.setName(name);
-    console.log(name);
   }
 
   return (
@@ -28,7 +27,7 @@ function MemeForm(props: formProps) {
             onChange={(e) => setName(e.currentTarget.value)}
           />
         </label>
-        <input type="submit" />
+        <input type="submit" value="Display Meme"/>
       </form>
     </div>
   )

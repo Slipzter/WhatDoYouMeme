@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import MemeForm from './components/FindMeme';
 import ViewMemes from './components/ViewMemes';
 import FindMeme from './components/FindMeme';
 
