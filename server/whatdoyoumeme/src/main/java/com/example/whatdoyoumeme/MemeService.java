@@ -25,6 +25,10 @@ public class MemeService {
         this.memeRepository = memeRepository;
     }
 
+    public List<MemeDTO> getAllMemes() {
+        return memeRepository.getAllMemes().stream().map(this::convertMemeToDTO).toList();
+    }
+
     public void generateMemeFromApi(String name, String type, String bottom, String top) throws IOException, InterruptedException {
         String formattedTop = top.replace(" ", "%20").replace("?", "%3F");
         String formattedBottom = bottom.replace(" ", "%20").replace("?", "%3F");

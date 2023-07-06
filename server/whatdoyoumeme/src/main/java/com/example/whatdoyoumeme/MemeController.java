@@ -5,6 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/memes")
@@ -17,10 +18,12 @@ public class MemeController {
         this.service = service;
     }
 
+    @GetMapping
+    public ResponseEntity<?> getAllMemes() {
+        List<MemeDTO> memeDTOList = service.getAllMemes();
+        return ResponseEntity.ok(memeDTOList);
+    }
 
-    // TODO
-    // IMPLEMENT GET ALL AT HOME ENDPOINT
-    
     @PostMapping
     public ResponseEntity<?> generateMemeFromApi(@RequestBody AddMemeDTO dto) {
         try {
@@ -51,6 +54,9 @@ public class MemeController {
     @PutMapping("/{memeName}")
     public ResponseEntity<?> updateMeme(@PathVariable("memeName") String memeName, @RequestBody UpdateMemeDTO updateMemeDTO) {
         MemeDTO updatedMeme = service.updateMeme(memeName, updateMemeDTO.name());
+        if (updatedMeme == null) {
+            return ResponseEntity.notFound().build();
+        }
         return ResponseEntity.ok(updatedMeme);
     }
 

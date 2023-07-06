@@ -17,7 +17,7 @@ public class MemeRepository {
     }
 
     public List<Meme> getAllMemes() {
-        Iterable all = repo.findAll();
+        Iterable<Meme> all = repo.findAll();
         return Streamable.of(all).toList();
     }
 

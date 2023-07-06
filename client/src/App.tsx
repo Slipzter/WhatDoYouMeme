@@ -5,14 +5,13 @@ import FindMeme from './components/FindMeme';
 import GenerateMeme from './components/GenerateMeme';
 import DeleteMeme from './components/DeleteMeme';
 import UpdateMeme from './components/UpdateMeme';
+import AllMemes from './components/AllMemes';
 
 
 function App() {
 
   const [name, setName] = useState("");
   const [imageSrc, setImageSrc] = useState("");
-
-  const testName = 'test3';
 
   useEffect(() => {
     printMeme();
@@ -29,20 +28,16 @@ function App() {
     });
   }
 
-
-
-
-
-
-
   return (
     <>
       <div>
+        <h1>what do you meme</h1>
         <FindMeme setName={setName}/>
         <ViewMemes imageSrc={imageSrc} memeName={name}/>
         <GenerateMeme />
         <UpdateMeme />
         <DeleteMeme />
+        <AllMemes />
       </div>
     </>
   )
