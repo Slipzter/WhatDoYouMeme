@@ -22,7 +22,7 @@ h3 {
 }
 
 h4 {
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 
 .app-header {
@@ -68,7 +68,7 @@ h4 {
 
 .app-forms h5 {
   margin: 0 1em 0 0;
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 
 .find-meme {
@@ -230,4 +230,8 @@ h4 {
   width: 300px;
   border-radius: 2px;
   margin-bottom: 10px;
+}
+
+button h6 {
+  font-size: 2em;
 }
