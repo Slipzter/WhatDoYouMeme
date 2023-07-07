@@ -22,7 +22,8 @@ function MemeForm(props: formProps) {
       <h2>Find Meme</h2>
       <form onSubmit={handleSubmit} className="find-meme__form">
         <div className="find-meme__form__left">
-          <label>Find meme:
+          <label>
+            <h5>Enter name:</h5>
             <input
               type="text" 
               value={name}

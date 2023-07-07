@@ -22,7 +22,7 @@ function DeleteMeme() {
       <h2>Delete Meme</h2>
       <form onSubmit={handleSubmit} className="delete-meme__form">
         <div className="delete-meme__form__left">
-          <label>Name of meme to delete:
+          <label><h5>Name of meme to delete:</h5>
             <input
               type="text" 
               value={name}

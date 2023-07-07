@@ -18,7 +18,6 @@ function GenerateMeme() {
   
     postToApi(name, type, bottom, top);
   
-    // Reset the input fields (if desired)
     setMemeName("");
     setMemeType("");
     setBottomText("");
@@ -45,8 +44,8 @@ function GenerateMeme() {
       <h2>Generate New Meme</h2>
       <form onSubmit={generateMeme} className="generate-meme__form">
         <div className="generate-meme__form__left">
-          <label>
-            Give it a name:
+          <label><h5>Give it a name:</h5>
+            
             <input
               type="text" 
               value={inputName}
@@ -55,7 +54,7 @@ function GenerateMeme() {
             />
           </label>
           <label>
-            Choose image:
+            <h5>And an image:</h5>
             <select onChange={(e) => setMemeType(e.currentTarget.value)} value={inputType} id="meme" className="form-control">
                       
                       <option value="10-Guy">10 Guy</option>
@@ -2059,7 +2058,7 @@ function GenerateMeme() {
             </select>
           </label>
           <label>
-            Top text:
+           <h5> Top text:</h5>
             <input
               type="text" 
               value={inputTopText}
@@ -2068,7 +2067,7 @@ function GenerateMeme() {
             />
           </label>
           <label>
-            Bottom text:
+            <h5>Bottom text:</h5>
             <input
               type="text" 
               value={inputBottomText}

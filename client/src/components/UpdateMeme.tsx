@@ -32,7 +32,7 @@ function UpdateMeme() {
       
       <form onSubmit={handleSubmit} className="update-meme__form">
         <div className="update-meme__form__left">
-          <label>Choose one to update:
+          <label><h5>Choose one to update:</h5>
             <input
               type="text" 
               value={name}
@@ -40,7 +40,7 @@ function UpdateMeme() {
               onChange={(e) => setName(e.currentTarget.value)}
             />
           </label>
-          <label>Enter new name:
+          <label><h5>Enter new name:</h5>
             <input
               type="text" 
               value={newName}

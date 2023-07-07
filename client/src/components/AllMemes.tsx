@@ -27,14 +27,15 @@ function AllMemes() {
 
   return (
     <div className="all-memes">
-      <h2 className="all-memes__title">All Memes</h2>
+      <h2 className="all-memes__title">Saved Memes</h2>
       <button className="all-memes__button__show" onClick={handleClick}>Display All</button>
+
       <button className="all-memes__button__hide" onClick={hideMemes}>Hide All</button>
       <div className="all-memes__gallery">
         {allMemes.map((meme: meme, index: number) => {
           return (
             <div key={index} className="all-memes__gallery__single">
-              <h4>{meme.name}</h4>
+              <h4><q> {meme.name} </q></h4>
               <img className="all-memes__gallery__single__image" src={`data:image/png;base64, ${meme.base64}`} alt="funny meme" />
             </div>
           )

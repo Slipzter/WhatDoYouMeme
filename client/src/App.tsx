@@ -33,7 +33,7 @@ function App() {
     <>
       <div>
         <header className='app-header'>        
-          <h1 className='app-title'>what Do You Meme</h1>
+          <h1 className='app-title'>what Do You Meme ?</h1>
         </header>
         <main className='app-main'>
           <section className='app-forms'>
